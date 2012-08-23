@@ -8,17 +8,34 @@ Ext.define('BABYSTYLE.view.Home', {
 
         styleHtmlContent: true,
         scrollable: true,
-
-        items: {
-            docked: 'top',
-            xtype: 'titlebar',
-            title: 'Baby Style'
-        },
-
-        html: [
-               "<h1><center>BABY</center></h1><br/>" +
-               "<h1><center>STYLE</center></h1>"
-            
-        ].join("")
+        layout:{type:"vbox",align:"middle",pack:"justify"},
+        defaults:{flex:1,width:'100%'},
+        items: [
+            {
+            	xtype:'panel',
+    	    	html:'test',
+    	    	style:'background-color:#ff0000',
+            },
+            {
+            	xtype:'panel',
+            	layout:{type:'hbox'},
+    	    	html:'test1',
+    	    	style:'background-color:#0000ff',
+    	    	items:[
+    	    	    {
+    	    	    	xtype:'button',
+    	    	    	flex:1
+    	    	    },
+    	    	    {
+    	    	    	xtype:'button',
+    	    	    	flex:1
+    	    	    },
+    	    	    {
+    	    	    	xtype:'button',
+    	    	    	flex:1
+    	    	    }
+    	    	]
+            }
+        ],
     }
 });
