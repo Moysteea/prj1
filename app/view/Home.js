@@ -5,7 +5,6 @@ Ext.define('BABYSTYLE.view.Home', {
     config: {
         title: 'Home',
         iconCls: 'home',
-
         styleHtmlContent: true,
         scrollable: true,
         style : '',

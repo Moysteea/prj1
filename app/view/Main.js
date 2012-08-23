@@ -1,11 +1,9 @@
 Ext.define("BABYSTYLE.view.Main", {
-    extend: 'Ext.tab.Panel',
-    requires: [
-        'Ext.TitleBar',
-        'Ext.Video'
-    ],
+    extend: 'Ext.Panel',
+   
     config: {
         tabBarPosition: 'bottom',
+        layout:'card',
 
         items: [
             {
