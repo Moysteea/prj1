@@ -3,10 +3,6 @@ Ext.define('BABYSTYLE.controller.MainController', {
     
     config: {
         refs: {
-<<<<<<< HEAD
-            blog: 'blog', 
-            contestView: '#contestView'	
-=======
             blog: 'blog',
             main: 'main',
             photo:'photo',
@@ -16,12 +12,8 @@ Ext.define('BABYSTYLE.controller.MainController', {
             shopbtn:'homepanel button[action=shopclick]',
             
             backbtn:'#backhomebutton'
->>>>>>> 메인수정
         },
         control: {
-        	"[action=contestAction]": {
-                tap: 'onContestButtonTap'
-            },
             'blog list' : {
             	itemtap: 'showPost'
             },
@@ -39,21 +31,8 @@ Ext.define('BABYSTYLE.controller.MainController', {
         	}
         }
     },
-<<<<<<< HEAD
-    onContestButtonTap: function() {
-    	
-    	console.log('dddd');
-//    	this.getContestView().animateActiveItem(0, { type: "slide",  direction: "right" });
-//
-//    	var mainView = this.getContestView();
-//    	Ext.Viewport.add(mainView);    	
-    	this.getContestView().setActiveItem(1);
-    },
-
-=======
     
     
->>>>>>> 메인수정
     showPost: function(list, index, target, record, e, eOpts) {
     	this.getBlog().push({
     		xtype: 'panel',
