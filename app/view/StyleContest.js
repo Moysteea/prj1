@@ -15,23 +15,20 @@ Ext.define('BABYSTYLE.view.StyleContest', {
         items: [
                 {
                	  xtype: 'button',
-              	  id : 'backhomebutton',
+              	  itemId : 'backhomebutton',
               	  action: 'backhomeclick',
                     ui: 'back',
                     text: 'Back',
                 },
-            {
-       
-                    
-                xtype: 'list',
-                itemTpl: '{title}',
-                title: 'Style Contest',
-                
-                store: 'articles'
-              
-              
-        
-            }
+	            {
+	       
+	                    
+	                xtype: 'list',
+	                itemTpl: '{title}',
+	                title: 'Style Contest',
+	                
+	                store: 'articles'
+	           }
         ]
     }
 });

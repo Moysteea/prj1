@@ -26,7 +26,7 @@ Ext.define('BABYSTYLE.controller.MainController', {
         	'homepanel button[action=shopclick]':{
         		tap: 'Shopclick'
         	},
-        	'#backhomebutton':{
+        	'button[ui=back]':{   //공통 이벤트를 사용할경우 ID를 사용하면 안된다.ID값은 유일한 값이라 공통으로 사용하면 this로  이동했다가 사라짐. 
         		tap: 'Backhomeclick'
         	}
         }

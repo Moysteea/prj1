@@ -12,7 +12,7 @@ Ext.define('BABYSTYLE.view.Photo', {
                 title: 'Style Photo',
                 items:{
                 	  xtype: 'button',
-                	  id : 'backhomebutton',
+                	  itemId : 'backhomebutton',
                 	  action: 'backhomeclick',
                       ui: 'back',
                       text: 'Back'

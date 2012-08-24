@@ -12,25 +12,21 @@ Ext.define('BABYSTYLE.view.StyleShop', {
         title: 'Shop',
         iconCls: 'action',
         
-        items:{
+        
+        items:[{
+        	  xtype: 'button',
+        	  itemId : 'backhomebutton',
+        	  action: 'backhomeclick',
+              ui: 'back',
+              text: 'Back'
+            	  },
+              {
                 xtype: 'list',
                 itemTpl: '{title}',
                 title: 'Style Shop',
                 store: 'articles',
-                items:{
-                	docked: 'top',
-                    xtype: 'titlebar',
-                    title: 'Style Photo',
-                    items:{
-                    	  xtype: 'button',
-                    	  id : 'backhomebutton',
-                    	  action: 'backhomeclick',
-                          ui: 'back',
-                          text: 'Back'
-                    }
-                	
-               }   
-        }
+        
+        }]
         
     }
 });
