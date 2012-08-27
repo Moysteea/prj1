@@ -9,14 +9,10 @@ Ext.define('BABYSTYLE.view.Blog', {
     ],
     
     config: {
-        title: 'Blog',
-        iconCls: 'star',
-        
         items: [
             {
                 xtype: 'list',
                 itemTpl: '{title}',
-                title: 'Sencha Blog',
                 
                 store: 'articles'
             }

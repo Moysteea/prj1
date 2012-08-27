@@ -1,49 +1,44 @@
 Ext.define('BABYSTYLE.view.Setting', {
-	extend: 'Ext.form.Panel',
+	extend: 'Ext.navigation.View',
 	xtype: 'setting',
 	
 	requires: [
-        'Ext.form.FieldSet',
-        'Ext.field.Email'
+		'Ext.dataview.List',
+
 	],
 	
 	config: {
 		title: 'Setting',
 		iconCls: 'settings',
-		url: '/BABYSTYLE/data/contact.jsp',   //나중에 수정할것 
+//	url: '/BABYSTYLE/data/contact.jsp',   //나중에 수정할것 
 		
-		items: [
-		    {
-		    	xtype: 'fieldset',
-		    	instructions: '(이메일은 옵션입니다.)',
-		    	
-				items: [
-				    {
-				    	xtype: 'textfield',
-				    	name: 'name',
-				    	label: '성명'
-				    },
-				    {
-				    	xtype: 'emailfield',
-				    	name: 'email',
-				    	label: '이메일'
-				    },
-				    {
-				    	xtype: 'textareafield',
-				    	name: 'message',
-				    	label: '메시지'
-				    }
-				    
-				]
-		    },
-		    {
-		    	xtype: 'button',
-		    	text: '보내기',
-		    	ui: 'confirm',
-		    	handler: function() {
-		    		this.up('contactform').submit();
-		    	}
-		    }
-		]
+		   
+        items: [
+                {
+               	  xtype: 'button',
+              	  itemId : 'backhomebutton',
+              	  action: 'backhomeclick',
+                    ui: 'back',
+                    text: 'Back',
+                },
+	            {
+	       
+	                    
+	                xtype: 'list',
+	                itemTpl: '{title}',
+	                title: 'Setting',
+	                /*
+	                onItemDisclosure:function(record, btn, index){
+	    				// disclouse 버턴이 눌러졌을 때, 동작 메소드 정의
+	    			},*/
+	                
+	                data: [
+	                       { title: '공지사항'},
+	                       { title: '도움말' },
+	                       { title: '페이스북' },
+	                       { title: '트위터' }
+	                   ]
+	           }
+        ]
 	}
 });

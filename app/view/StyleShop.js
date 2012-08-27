@@ -1,5 +1,5 @@
 Ext.define('BABYSTYLE.view.StyleShop', {
-    extend: 'Ext.navigation.View',
+    extend: 'Ext.tab.Panel',
     xtype: 'styleshop',
     
     requires: [
@@ -19,14 +19,18 @@ Ext.define('BABYSTYLE.view.StyleShop', {
         	  action: 'backhomeclick',
               ui: 'back',
               text: 'Back'
-            	  },
-              {
-                xtype: 'list',
-                itemTpl: '{title}',
-                title: 'Style Shop',
-                store: 'articles',
-        
-        }]
+       	  },
+       	  {
+       		  
+       		   
+       	  }, 
+       	  {
+              xtype: 'list',
+              itemTpl: '{title}',
+              title: 'Style Shop',
+              store: 'articles'
+          }
+          ]
         
     }
 });
