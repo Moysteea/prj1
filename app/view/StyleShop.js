@@ -1,5 +1,5 @@
 Ext.define('BABYSTYLE.view.StyleShop', {
-    extend: 'Ext.tab.Panel',
+    extend: 'Ext.navigation.View',
     xtype: 'styleshop',
     
     requires: [
