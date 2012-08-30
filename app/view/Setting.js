@@ -1,44 +1,43 @@
 Ext.define('BABYSTYLE.view.Setting', {
-	extend: 'Ext.navigation.View',
+	extend: 'Ext.Panel',
 	xtype: 'setting',
 	
-	requires: [
-		'Ext.dataview.List',
-
-	],
-	
 	config: {
-		title: 'Setting',
-		iconCls: 'settings',
-//	url: '/BABYSTYLE/data/contact.jsp',   //나중에 수정할것 
-		
-		   
-        items: [
-                {
-               	  xtype: 'button',
-              	  itemId : 'backhomebutton',
-              	  action: 'backhomeclick',
-                    ui: 'back',
-                    text: 'Back',
-                },
-	            {
-	       
-	                    
-	                xtype: 'list',
-	                itemTpl: '{title}',
-	                title: 'Setting',
-	                /*
-	                onItemDisclosure:function(record, btn, index){
-	    				// disclouse 버턴이 눌러졌을 때, 동작 메소드 정의
-	    			},*/
-	                
-	                data: [
-	                       { title: '공지사항'},
-	                       { title: '도움말' },
-	                       { title: '페이스북' },
-	                       { title: '트위터' }
-	                   ]
-	           }
-        ]
+	//	title: 'Setting',
+	//	 iconCls: 'settings',
+	//	url: '/BABYSTYLE/data/contact.jsp',   //나중에 수정할것 
+		layout: 'card',
+		items: [ 
+		       
+		         {
+	                xtype: 'toolbar',
+	                title:'Settings',
+	                docked: 'top',
+	                items:{  
+		                xtype: 'button',
+		              	 itemId : 'backhomebutton',
+		             	 action: 'backhomeclick',
+		                ui: 'back',
+		                text: 'Back'
+	                }
+		        },
+		        {
+		            xtype: 'list',
+		            //fullscreen: true,
+		            title: 'Settings',
+		            store:{
+		            	autoLoad: true,
+		            	fields:['title'],
+		                data: [
+		                      { title: '공지사항'},
+		                      { title: '도움말' },
+		                      { title: '페이스북' },
+		                      { title: '트위터' }
+		                  ]
+		            },
+		            itemTpl: '{title}'
+		        }
+		         
+		    ]
 	}
 });

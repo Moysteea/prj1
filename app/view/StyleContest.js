@@ -1,34 +1,52 @@
 Ext.define('BABYSTYLE.view.StyleContest', {
-    extend: 'Ext.navigation.View',
+    extend: 'Ext.Panel',
     xtype: 'stylecontest',
     
     requires: [
-        'Ext.dataview.List',
-        'Ext.data.proxy.JsonP',
-        'Ext.data.Store'
+    'Ext.tab.Panel'
     ],
     
     config: {
-        title: 'Contest',
-        iconCls: 'star',
-        
         items: [
-                {
-               	  xtype: 'button',
-              	  itemId : 'backhomebutton',
-              	  action: 'backhomeclick',
-                    ui: 'back',
-                    text: 'Back',
-                },
+                
 	            {
-	       
-	                    
-	                xtype: 'list',
-	                itemTpl: '{title}',
-	                title: 'Style Contest',
-	                
-	                store: 'articles'
-	           }
-        ]
+	                xtype: 'toolbar',
+	                title:'Style Contest',
+	                docked: 'top',
+	                items:{
+                	   xtype: 'button',
+	             	   itemId : 'backhomebutton',
+	            	   action: 'backhomeclick',
+	                   ui: 'back',
+	                   text: 'Back'
+		            }
+           
+	            },
+	            {
+	                xtype: 'tabpanel',	
+	                items: [
+	                    {
+	                        xtype: 'container',
+	                        title: '인기'
+	                    },
+	                    {
+	                        xtype: 'container',
+	                        title: '최신'
+	                    },
+	                    {
+	                        xtype: 'container',
+	                        title: '명예의 전당'
+	                    },
+	                    {
+	                        xtype: 'container',
+	                        title: 'MY'
+	                    }
+	                ]
+
+	            
+	            }
+	            
+	            
+	    ]
     }
 });

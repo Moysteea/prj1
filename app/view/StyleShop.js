@@ -1,36 +1,51 @@
 Ext.define('BABYSTYLE.view.StyleShop', {
-    extend: 'Ext.navigation.View',
-    xtype: 'styleshop',
-    
-    requires: [
-        'Ext.dataview.List',
-        'Ext.data.proxy.JsonP',
-        'Ext.data.Store'
-    ],
-    
+	  extend: 'Ext.Panel',
+	  xtype:'styleshop',
+	  requires: [
+		'Ext.tab.Panel'
+		],
+
     config: {
-        title: 'Shop',
-        iconCls: 'action',
-        
-        
-        items:[{
-        	  xtype: 'button',
-        	  itemId : 'backhomebutton',
-        	  action: 'backhomeclick',
-              ui: 'back',
-              text: 'Back'
-       	  },
-       	  {
-       		  
-       		   
-       	  }, 
-       	  {
-              xtype: 'list',
-              itemTpl: '{title}',
-              title: 'Style Shop',
-              store: 'articles'
-          }
-          ]
-        
+        items: [
+       
+		            {
+		                xtype: 'toolbar',
+		                title:'Style Shop',
+		                docked: 'top',
+		                items:{
+	                	   xtype: 'button',
+		             	   itemId : 'backhomebutton',
+		            	   action: 'backhomeclick',
+		                   ui: 'back',
+		                   text: 'Back'
+			            }
+	           
+		            },
+		            {
+		                xtype: 'tabpanel',
+		                items: [
+		                    {
+		                        xtype: 'container',
+		                        title: '전체'
+		                    },
+		                    {
+		                        xtype: 'container',
+		                        title: '의류'
+		                    },
+		                    {
+		                        xtype: 'container',
+		                        title: '장난감'
+		                    },
+		                    {
+		                        xtype: 'container',
+		                        title: '꾸미기'
+		                    }
+		                ]
+
+		            
+		            }
+		    ]
     }
+	
+   
 });
