@@ -24,14 +24,27 @@ Ext.define('BABYSTYLE.view.StyleContest', {
 	            },
 	            {
 	                xtype: 'tabpanel',	
+
+	                defaults: {
+	                    styleHtmlContent: true
+	                },
+	                layout:{	
+	                	type:'card',
+	                	animation:{
+	                		type:'fade'
+	                	}
+	                	
+	                },
 	                items: [
 	                    {
 	                        xtype: 'container',
-	                        title: '인기'
+	                        title: '인기',
+	                        html: 'Home Screen'
 	                    },
 	                    {
 	                        xtype: 'container',
-	                        title: '최신'
+	                        title: '최신',
+	                        html: 'Contact Screen'
 	                    },
 	                    {
 	                        xtype: 'container',

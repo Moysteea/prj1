@@ -15,34 +15,32 @@ Ext.define('BABYSTYLE.view.Home', {
                 	xtype:'titlebar',
                 	title:'Baby Style'
                 },
-	            { 
-                  xtype:'panel',
-                  flex:'8',
-                  layout:{type:'hbox',align: 'center'},
-                  items:[
-	                         {
-	                        	 xtype:'spacer'
-	                        	 
-	                         },
-	                         {
-	                		//카메라 버튼 부분.
-			          			xtype:'button',
-			      				width:'30%',
-			      				height:'50%',
-			      		//		top:'50%',
-			      				//right:'50%',
-			  	    	    	ui: 'round',
-			  	    	    	action:'photoclick',
-			  	    	    	html:"photho"
-		  	    	         },
-		  	    	         {
-		                    	 xtype:'spacer'
-		                     }
-                  ]
-                },
+	            { //카메라 버튼 부분 
+	            	xtpe:'panel',
+	            	layout:{type:'hbox',align:'center',pack:'center'},
+	      	    	style:'background-color:rgba(0, 0, 0, 0.1);',
+	      	    	flex:4,
+	    	    	itmes:[{
+	    	    			xtype:'spacer',
+	    	    	    	flex:1
+	    	    		},
+	    	    		{
+    	    				xtype:'button',
+    	    				docked:'top',
+	    	    	    	ui: 'round',
+	    	    	    	action:'photoclick',
+	    	    	    	html:'testcamera',
+	    	    	    	flex:3
+	    	    	     	//html:"<img src='https://encrypted-tbn1.google.com/images?q=tbn:ANd9GcR43euvI5R5w-r7CDTdlOCUv_okaSf84yQehvNPGUitKybd38H4'>",
+	    	    		},
+	    	    		{
+	    	    			xtype:'spacer',
+	    	    	    	flex:1
+	    	    		}] 
+	            },
 	            {   // 하단 버튼 
 	            	xtype:'panel',
-	    	    	flex:'2',
+	    	    	flex:2,
 	    	    	items:[{
 	    	    			xtype:'panel',
 	    	    			docked:'top',
