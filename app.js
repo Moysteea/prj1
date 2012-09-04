@@ -1,8 +1,8 @@
 Ext.application({
-    controllers: ["MainController"],
-
-    stores: ['Articles'],
-
+	 models: ['Article', 'Contest'],    
+	 controllers: ["MainController"],
+	 stores: ['Articles','Conteststore'],
+ 
     name: 'BABYSTYLE',
 
     requires: [

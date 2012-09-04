@@ -3,7 +3,12 @@ Ext.define('BABYSTYLE.view.StyleContest', {
     xtype: 'stylecontest',
     
     requires: [
-    'Ext.tab.Panel'
+    'Ext.tab.Panel',
+    'Ext.DataView',
+    'Ext.dataview.List',
+    'Ext.data.proxy.JsonP',
+    'Ext.data.Store',
+    'Ext.TitleBar'
     ],
     
     config: {
@@ -35,11 +40,16 @@ Ext.define('BABYSTYLE.view.StyleContest', {
 	                	}
 	                	
 	                },
+	                height:'400px',
 	                items: [
 	                    {
-	                        xtype: 'container',
+	                        xtype: 'dataview',
+	                        store: 'Contests',
 	                        title: '인기',
-	                        html: 'Home Screen'
+	                      //  html: 'Home Screen',
+	                    //    itemTpl:"<div sytle='width:100%;'>test1,{ContentID},{Title},{AddedBy}</div>"
+	                        itemTpl:'{Title}'
+	                    	    
 	                    },
 	                    {
 	                        xtype: 'container',
@@ -48,11 +58,13 @@ Ext.define('BABYSTYLE.view.StyleContest', {
 	                    },
 	                    {
 	                        xtype: 'container',
-	                        title: '명예의 전당'
+	                        title: '명예의 전당',
+	                        html: ' 명예의 전당'
 	                    },
 	                    {
 	                        xtype: 'container',
-	                        title: 'MY'
+	                        title: 'MY',
+	                        html: '내사진'
 	                    }
 	                ]
 
