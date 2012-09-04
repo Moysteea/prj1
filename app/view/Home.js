@@ -9,12 +9,10 @@ Ext.define('BABYSTYLE.view.Home', {
         scrollable: true,
         layout:{type:'vbox',align:'center',pack:'stretch'},
         defaults:{width:'100%'},
+        style 	: "background-image:url('./resources/images/main_bg.png');" +
+        			'background-repeat:no-repeat;',
         items: [
-                {
-                	docked:'top',	
-                	xtype:'titlebar',
-                	title:'Baby Style'
-                },
+
 	            { 
                   xtype:'panel',
                   flex:'8',
@@ -27,13 +25,14 @@ Ext.define('BABYSTYLE.view.Home', {
 	                         {
 	                		//카메라 버튼 부분.
 			          			xtype:'button',
-			      				width:'30%',
-			      				height:'50%',
-			      		//		top:'50%',
-			      				//right:'50%',
-			  	    	    	ui: 'round',
+			      				// cls: 'btn',
+			      	
+			  	    	    	
 			  	    	    	action:'photoclick',
-			  	    	    	html:"photho"
+			  	    	    	html:"photo"
+			  	    	    		
+			  	    	    	
+			  	    	    		
 		  	    	         },
 		  	    	         {
 		                    	 xtype:'spacer'
@@ -51,16 +50,20 @@ Ext.define('BABYSTYLE.view.Home', {
 			    	    			xtype:'button',
 				   	    	    	//ui: 'round', 
 				   	    	    	action:'contestclick',
-				   	    	    	html:"<img src='https://encrypted-tbn2.google.com/images?q=tbn:ANd9GcRZ9M8do_ckG3BTsSVPLzH0WLsk46Qw3Nv5q_e-IU-CtDZHr5BfSA' " +
-				   	    	    			"style='height:200px;width:150px'>",
+				   	    	    	html:"<img src='./resources/images/main_btn1.png' " +
+				   	    	    			"style='height:130px; width:240px;'>",
+				   	    	    	style: 'border:0;',
+				  	   			 margin : '0 0 0 0',
 				   	    	    	flex:4
 				    	    	},
 			    	    	    {
 			    	    	    	xtype:'button',
 			    	    	    //	ui: 'round',
 			    	    	    	action:'shopclick',
-			    	    	    	html:"<img src='https://encrypted-tbn0.google.com/images?q=tbn:ANd9GcRccOIkV6aHLzXW8XeJW94rHzy-ah28nLCd4f_RduviSfZ1tOjazg'" +
-			    	    	    			"style='height:200px;width:150px'>",
+			    	    	    	html:"<img src='./resources/images/main_btn2.png' " + 
+			    	    	    			"style='height:130px; width:240px;'>",
+			    	    	    			style: 'border:0;',
+				  	   			 margin : '0 0 0 0',
 			    	    	    	flex:4
 			    	    	    }
 				    	    	
